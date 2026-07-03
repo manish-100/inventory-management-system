@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     database_url: str = "postgresql+psycopg2://postgres:postgres@localhost:5432/inventary_db"
-    frontend_origin: str = "http://localhost:5173"
+    frontend_origin: str = "https://inventory-management-system-blush-eight.vercel.app"
     model_config = SettingsConfigDict(env_file='.env', extra='ignore')
 
 settings = Settings()
